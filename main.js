@@ -278,4 +278,148 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     fadeElements.forEach(el => el.classList.add('is-visible'));
   }
+
+  // -------------------------------------------------------------------------
+  // 4. MOBILE PROJECT IMAGE CAROUSELS
+  // -------------------------------------------------------------------------
+  /**
+   * Wraps each .project-showcase-grid in a .project-carousel-wrap and
+   * injects prev/next buttons, a slide counter, and dot pagination.
+   * Syncs with native CSS scroll-snap via scrollLeft.
+   * Only active on viewports ≤ 767px; tears down / rebuilds on resize.
+   */
+  const MOBILE_BP = 768;
+
+  function initProjectCarousels() {
+    document.querySelectorAll('.project-showcase-grid').forEach(grid => {
+      // Already wrapped → skip
+      if (grid.closest('.project-carousel-wrap')) return;
+
+      const items = Array.from(grid.querySelectorAll('.project-media-item'));
+      if (items.length < 2) return;
+
+      const total = items.length;
+
+      // ── Wrap ────────────────────────────────────────────────────────────
+      const wrap = document.createElement('div');
+      wrap.className = 'project-carousel-wrap';
+      grid.parentNode.insertBefore(wrap, grid);
+      wrap.appendChild(grid);
+
+      // ── Counter badge ────────────────────────────────────────────────────
+      const counter = document.createElement('span');
+      counter.className = 'carousel-counter';
+      counter.setAttribute('aria-live', 'polite');
+      wrap.appendChild(counter);
+
+      // ── Prev / Next buttons ──────────────────────────────────────────────
+      const svgPrev = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>`;
+      const svgNext = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>`;
+
+      const btnPrev = document.createElement('button');
+      btnPrev.className = 'carousel-btn carousel-btn-prev';
+      btnPrev.setAttribute('aria-label', 'Previous image');
+      btnPrev.innerHTML = svgPrev;
+      wrap.appendChild(btnPrev);
+
+      const btnNext = document.createElement('button');
+      btnNext.className = 'carousel-btn carousel-btn-next';
+      btnNext.setAttribute('aria-label', 'Next image');
+      btnNext.innerHTML = svgNext;
+      wrap.appendChild(btnNext);
+
+      // ── Dot indicators ───────────────────────────────────────────────────
+      const dotsWrap = document.createElement('div');
+      dotsWrap.className = 'carousel-dots';
+      dotsWrap.setAttribute('role', 'tablist');
+      const dotEls = items.map((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('role', 'tab');
+        d.setAttribute('aria-label', `Image ${i + 1}`);
+        dotsWrap.appendChild(d);
+        return d;
+      });
+      // Insert dots AFTER the wrap (not inside, so they sit below the image)
+      wrap.parentNode.insertBefore(dotsWrap, wrap.nextSibling);
+
+      // ── State ────────────────────────────────────────────────────────────
+      let current = 0;
+      let isScrolling = false;
+
+      function updateUI(idx) {
+        current = idx;
+        counter.textContent = `${idx + 1} / ${total}`;
+        dotEls.forEach((d, i) => d.classList.toggle('active', i === idx));
+        btnPrev.disabled = idx === 0;
+        btnNext.disabled = idx === total - 1;
+      }
+
+      function goTo(idx) {
+        if (idx < 0 || idx >= total) return;
+        const itemW = grid.offsetWidth;
+        grid.scrollTo({ left: idx * itemW, behavior: 'smooth' });
+        updateUI(idx);
+      }
+
+      // ── Event listeners ──────────────────────────────────────────────────
+      btnPrev.addEventListener('click', () => goTo(current - 1));
+      btnNext.addEventListener('click', () => goTo(current + 1));
+
+      dotEls.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+      // Sync current index after native scroll-snap settles
+      let scrollTimer;
+      grid.addEventListener('scroll', () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          const itemW = grid.offsetWidth;
+          const newIdx = Math.round(grid.scrollLeft / itemW);
+          if (newIdx !== current) updateUI(newIdx);
+        }, 80);
+      }, { passive: true });
+
+      // ── Init first frame ─────────────────────────────────────────────────
+      updateUI(0);
+
+      // Store teardown info on grid element
+      grid._carouselTeardown = () => {
+        btnPrev.remove();
+        btnNext.remove();
+        counter.remove();
+        dotsWrap.remove();
+        wrap.parentNode.insertBefore(grid, wrap);
+        wrap.remove();
+        delete grid._carouselTeardown;
+      };
+    });
+  }
+
+  function teardownProjectCarousels() {
+    document.querySelectorAll('.project-showcase-grid').forEach(grid => {
+      if (grid._carouselTeardown) grid._carouselTeardown();
+    });
+  }
+
+  // Run on load, re-evaluate on resize
+  let carouselsActive = false;
+
+  function evaluateCarousels() {
+    const isMobile = window.innerWidth < MOBILE_BP;
+    if (isMobile && !carouselsActive) {
+      initProjectCarousels();
+      carouselsActive = true;
+    } else if (!isMobile && carouselsActive) {
+      teardownProjectCarousels();
+      carouselsActive = false;
+    }
+  }
+
+  evaluateCarousels();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(evaluateCarousels, 150);
+  }, { passive: true });
 });
