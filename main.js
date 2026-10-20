@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (header) {
       header.classList.add('nav-open');
+      header.classList.remove('header-hidden');
     }
     menuToggles.forEach(btn => {
       btn.classList.add('active');
@@ -83,6 +84,67 @@ document.addEventListener('DOMContentLoaded', () => {
       closeNav();
     }
   });
+
+  // -------------------------------------------------------------------------
+  // 1B. SMART STICKY HEADER (Slide up on scroll-down, slide down on scroll-up)
+  // -------------------------------------------------------------------------
+  if (header) {
+    let lastScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+    let ticking = false;
+    const scrollThreshold = 8;  // min delta in pixels before triggering slide
+    const topSafeZone = 80;     // within 80px from top of page, header remains anchored
+
+    const onScroll = () => {
+      const currentScrollY = Math.max(0, window.pageYOffset || document.documentElement.scrollTop);
+
+      // If mobile navigation is open, never hide header
+      const isMobileNavOpen = mobileNav && mobileNav.classList.contains('open');
+      if (isMobileNavOpen) {
+        header.classList.remove('header-hidden');
+        lastScrollY = currentScrollY;
+        ticking = false;
+        return;
+      }
+
+      // Add elevated shadow/subtle blur when scrolled past top
+      if (currentScrollY > 20) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+
+      // At top of page: always show header
+      if (currentScrollY <= topSafeZone) {
+        header.classList.remove('header-hidden');
+        lastScrollY = currentScrollY;
+        ticking = false;
+        return;
+      }
+
+      const delta = currentScrollY - lastScrollY;
+
+      // Only respond if delta exceeds threshold to avoid jitter
+      if (Math.abs(delta) >= scrollThreshold) {
+        if (delta > 0 && currentScrollY > topSafeZone) {
+          // Scrolling down: slide up out of view
+          header.classList.add('header-hidden');
+        } else if (delta < 0) {
+          // Scrolling up: slide down into view
+          header.classList.remove('header-hidden');
+        }
+        lastScrollY = currentScrollY;
+      }
+
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
 
   // -------------------------------------------------------------------------
   // 2. HERO CAROUSEL (8 Slides, Left/Right Buttons, Dots, Auto-Advance, Swiping)

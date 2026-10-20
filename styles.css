@@ -219,6 +219,17 @@ header.site-header {
   width: 100%;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.38s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+header.site-header.header-hidden {
+  transform: translateY(-100%);
+}
+
+header.site-header.header-scrolled {
+  background-color: rgba(246, 244, 240, 0.95);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
 }
 
 .header-inner {
