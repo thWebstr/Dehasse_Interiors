@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | De Hasse Architectural &amp; Interior Design</title>
+  <meta name="description" content="Private residential projects by De Hasse Architectural &amp; Interior Design, specialising in new houses, rural buildings, period homes and listed properties.">
+  
+  <!-- Google Fonts: Cormorant Garamond & Jost -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- ======================================================================
+       HEADER (Identical markup on every page)
+       ====================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="header-logo" href="index.html" aria-label="De Hasse Architectural &amp; Interior Design Home">
+        <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/1765544426728-37W06Z7NFC3WLHOBYXMJ/de-hasse-primary-logo-siam-rgb-900px-w-72ppi.png" alt="De Hasse Architectural &amp; Interior Design" width="220" height="38">
+      </a>
+      
+      <nav class="header-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="approach.html">Approach</a>
+        <a href="journal.html">Journal</a>
+        <a href="press.html">Press</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-action">
+        <a href="contact.html" class="btn">Contact</a>
+        <button type="button" class="mobile-menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span class="bar bar-top"></span>
+          <span class="bar bar-bottom"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Full-screen Mobile Navigation Drawer -->
+  <div aria-hidden="true" class="mobile-nav-overlay" id="mobileNav">
+    <div class="mobile-nav-header">
+      <a class="mobile-nav-logo" href="index.html" aria-label="De Hasse Architectural &amp; Interior Design Home">
+        <img alt="De Hasse Architectural &amp; Interior Design" height="32" src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/1765544426728-37W06Z7NFC3WLHOBYXMJ/de-hasse-primary-logo-siam-rgb-900px-w-72ppi.png" width="180"/>
+      </a>
+      <button aria-label="Close navigation menu" class="mobile-nav-close" id="mobileNavClose" type="button">
+        <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24" width="24">
+          <line x1="18" x2="6" y1="6" y2="18"></line>
+          <line x1="6" x2="18" y1="6" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="approach.html">Approach</a>
+      <a href="journal.html">Journal</a>
+      <a href="press.html">Press</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <div><strong>De Hasse Architectural &amp; Interior Design</strong></div>
+      <div>Kent, United Kingdom</div>
+      <div><a href="mailto:giselle@dehasse.co.uk">giselle@dehasse.co.uk</a></div>
+      <div><a href="tel:07774865391">07774 865391</a></div>
+    </div>
+  </div>
+
+    <main>
+    <!-- ====================================================================
+         PAGE HEADER
+         ==================================================================== -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header-inner">
+          <span class="eyebrow">Portfolio</span>
+          <h1><em>Residential</em> Projects</h1>
+          <p class="lead">My portfolio focuses on private residential projects where spatial features and interior design are conceived as a cohesive whole. I specialise in new houses, rural buildings, period homes and listed properties, creating spaces that feel calm, natural and enduring. Each project is approached with an emphasis on proportion, material integrity and spatial clarity.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PORTFOLIO PROJECTS COVER GRID (11 Projects with Cover Images)
+         ==================================================================== -->
+    <section class="projects-index-section fade-in" aria-label="Project Portfolio Overview">
+      <div class="container">
+        <div class="projects-cover-grid">
+          <!-- 01: The New House -->
+          <a href="#project-01" class="project-cover-card" aria-label="View project: The New House">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/be327ac6-9b74-442f-baa6-7a4fd3a805f0/tables-new-house-hertfordshire-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="The New House, Hertfordshire - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">01</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">The New House</h2>
+                <span class="project-cover-loc">Hertfordshire</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 02: Cottage -->
+          <a href="#project-02" class="project-cover-card" aria-label="View project: Cottage">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/d2c833e6-64ac-45fd-93f4-0987a4d3c653/bedroom-cottage-east-sussex-by-De-Hasse-Architectural-and-Interior-Design.jpg.jpg?format=1500w" alt="Cottage, East Sussex - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">02</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Cottage</h2>
+                <span class="project-cover-loc">East Sussex</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 03: The Barn -->
+          <a href="#project-03" class="project-cover-card" aria-label="View project: The Barn">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/846cf052-5180-4f7b-af76-720b1ac9eac5/Fireplace-Barn-cotswolds-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="The Barn, Cotswolds - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">03</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">The Barn</h2>
+                <span class="project-cover-loc">Cotswolds</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 04: Georgian House -->
+          <a href="#project-04" class="project-cover-card" aria-label="View project: Georgian House">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/025a799a-63da-4114-b769-6539c917f429/door-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="Georgian House, Kent - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">04</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Georgian House</h2>
+                <span class="project-cover-loc">Kent</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 05: Shoot Lodge -->
+          <a href="#project-05" class="project-cover-card" aria-label="View project: Shoot Lodge">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/5d1b0f27-969d-4129-9c16-ad27aa325c14/IMG_0692.jpg?format=1500w" alt="Shoot Lodge, Devon - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">05</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Shoot Lodge</h2>
+                <span class="project-cover-loc">Devon</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 06: Apartment Portals Nous -->
+          <a href="#project-06" class="project-cover-card" aria-label="View project: Apartment Portals Nous">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/166d831d-d997-4bb3-902b-b583589f2f42/IMG_1497-min.jpg?format=1500w" alt="Apartment Portals Nous, Majorca - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">06</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Apartment Portals Nous</h2>
+                <span class="project-cover-loc">Majorca</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 07: Edwardian House -->
+          <a href="#project-07" class="project-cover-card" aria-label="View project: Edwardian House">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/f7a0d89c-541f-45b8-84a0-1ab81bd617a0/IMG_4502-min.jpg?format=1500w" alt="Edwardian House, Tunbridge Wells - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">07</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Edwardian House</h2>
+                <span class="project-cover-loc">Tunbridge Wells</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 08: Victorian Ground Floor Apartment -->
+          <a href="#project-08" class="project-cover-card" aria-label="View project: Victorian Ground Floor Apartment">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/b89d76ac-d954-45a5-8401-6fdbb901d1d2/Victorian+ground+floor+apartment+renovation+in+Tunbridge+Wells+by+De+Hasse+architectural+interior+design2.jpg?format=1500w" alt="Victorian Ground Floor Apartment, Tunbridge Wells - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">08</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Victorian Ground Floor Apartment</h2>
+                <span class="project-cover-loc">Tunbridge Wells</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 09: De Hasse Store -->
+          <a href="#project-09" class="project-cover-card" aria-label="View project: De Hasse Store">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/3a0ccf3f-b9e6-4eb3-af13-ab2db8d70ae9/office-exterior-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="De Hasse Store, Tunbridge Wells - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">09</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">De Hasse Store</h2>
+                <span class="project-cover-loc">Tunbridge Wells</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 10: Rental Reconfiguration -->
+          <a href="#project-10" class="project-cover-card" aria-label="View project: Rental Reconfiguration">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/838c2d0d-63d6-4fb0-8d51-aac20bae369b/de-hasse-rental-reconfiguration-4.jpg?format=1500w" alt="Rental Reconfiguration, East Sussex - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">10</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Rental Reconfiguration</h2>
+                <span class="project-cover-loc">East Sussex</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+
+          <!-- 11: Town House -->
+          <a href="#project-11" class="project-cover-card" aria-label="View project: Town House">
+            <div class="project-cover-media">
+              <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/e5ec9542-01a7-49aa-9fa2-2ecdade4adc2/de-hasse-townhouse-2.jpg?format=1500w" alt="Town House, Old Richmond - De Hasse Architectural &amp; Interior Design" width="1200" height="900" loading="lazy">
+              <span class="project-cover-num">11</span>
+            </div>
+            <div class="project-cover-meta">
+              <div>
+                <h2 class="project-cover-title">Town House</h2>
+                <span class="project-cover-loc">Old Richmond</span>
+              </div>
+              <span class="project-cover-action">View Project &darr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         COMPLETE 11-PROJECT RESIDENTIAL SHOWCASE
+         ==================================================================== -->
+    <section class="projects-portfolio-showcase" aria-label="Comprehensive Project Showcases">
+    <!-- Project 01: The New House -->
+    <article class="project-showcase fade-in" id="project-01">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">01 / 11</span>
+            <h2 class="project-showcase-title">The New House</h2>
+            <span class="project-showcase-loc">Hertfordshire</span>
+          </div>
+          <p class="project-showcase-desc">A substantial new build family residence where architectural decisions and interior spaces were conceived as a single coherent entity. Bespoke natural timber joinery, refined stone surfaces, and clean spatial flow.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/be327ac6-9b74-442f-baa6-7a4fd3a805f0/tables-new-house-hertfordshire-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="living-room-2-new-house-hertfordshire-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/b5f2e78d-f64b-455b-91c6-9285e2cd1adc/shower-room-1-new-house-hertfordshire-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="de-hasse-interior-designer-the-new-house" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/34c68b60-6b58-4b60-88ce-3e63855c83ff/walls-new-house-hertfordshire-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="de-hasse-interior-designer-the-new-house" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/190488eb-8836-4798-8b13-298a80a39795/IMG_1700.jpg?format=1000w" alt="closet-new-house-hertfordshire-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 02: Cottage -->
+    <article class="project-showcase fade-in" id="project-02">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">02 / 11</span>
+            <h2 class="project-showcase-title">Cottage</h2>
+            <span class="project-showcase-loc">East Sussex</span>
+          </div>
+          <p class="project-showcase-desc">A sensitive refurbishment of a rural cottage, celebrating historic textures with muted lime plasters, soft natural textiles, and calm light-filled bedrooms.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/d2c833e6-64ac-45fd-93f4-0987a4d3c653/bedroom-cottage-east-sussex-by-De-Hasse-Architectural-and-Interior-Design.jpg.jpg?format=1500w" alt="bedroom-cottage-east-sussex-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/d39b7050-05f5-4a6d-86d5-50cb8d1a0610/IMG_2313-min.jpg?format=1000w" alt="living-room-3-cottage-east-sussex-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/1a39992e-05d9-49a3-a67c-972929c2a12e/IMG_2387-min.jpg?format=1000w" alt="cottage-east-sussex-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/7fe8b524-2f07-4f04-9eac-b195eeee14b9/detail-cottage-east-sussex-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="bed-cottage-east-sussex-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 03: The Barn -->
+    <article class="project-showcase fade-in" id="project-03">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">03 / 11</span>
+            <h2 class="project-showcase-title">The Barn</h2>
+            <span class="project-showcase-loc">Cotswolds</span>
+          </div>
+          <p class="project-showcase-desc">An expansive Cotswold stone barn conversion. Exposed structural timbers and an imposing natural stone fireplace balance contemporary bespoke joinery and expansive glazing.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/846cf052-5180-4f7b-af76-720b1ac9eac5/Fireplace-Barn-cotswolds-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="Living room with wooden beams, large white pendant lamps, a fireplace, and a dining table with white chairs and decorative green vases." width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/aa95f84a-751d-4a5a-824a-57310e22e752/sofa-1-Barn-cotswolds-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="Living room with a beige sofa, throw pillows, a table lamp, a basket with green plants, and a metal container near a wooden column." width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/e2ec91bf-2227-4f23-8d1a-005434543e32/living-room-top-view-Barn-cotswolds-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="A cozy living room with a beige sofa piled with black, gray, and brown pillows, a wooden coffee table, and a workspace with a wooden dining table and white chairs. Two large white pendant lights hang over the table, and there" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/cd31567b-138f-479a-9c1a-12d428ed40c3/glass-door-Barn-cotswolds-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="Modern dining and kitchen area with wooden beams and high ceilings, illuminated pendant lights, a large dining table with chairs, and a kitchen island with bar stools, viewed through a glass wall at night." width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 04: Georgian House -->
+    <article class="project-showcase fade-in" id="project-04">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">04 / 11</span>
+            <h2 class="project-showcase-title">Georgian House</h2>
+            <span class="project-showcase-loc">Kent</span>
+          </div>
+          <p class="project-showcase-desc">A disciplined architectural restoration of a Grade II listed Georgian town residence, reinstating historic mouldings, proportions and natural light while modernising circulation.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/025a799a-63da-4114-b769-6539c917f429/door-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="door-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/8303492f-5b76-469b-90f4-760e296b21b3/big-mirror-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="big-mirror-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/2559abda-01da-4fc1-a228-7c8bca6eb312/countertop-1-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="kitchen-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/d39bfd13-9ba7-4b62-b9f5-fc1f33689572/window-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="living-room-4-georgian-house-kentby-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 05: Shoot Lodge -->
+    <article class="project-showcase fade-in" id="project-05">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">05 / 11</span>
+            <h2 class="project-showcase-title">Shoot Lodge</h2>
+            <span class="project-showcase-loc">Devon</span>
+          </div>
+          <p class="project-showcase-desc">Set within rolling Devon countryside, this lodge was reconfigured for entertaining and quiet repose, using tactile local materials and deep atmospheric tones.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/5d1b0f27-969d-4129-9c16-ad27aa325c14/IMG_0692.jpg?format=1500w" alt="shoot lodge devon de hasse architectural and interior design " width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/cf02c361-2e27-4a8e-9816-79c841aad586/IMG_0693.jpg?format=1000w" alt="shoot lodge devon de hasse architectural and interior design " width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/1fbe3ed0-f2e8-4a73-926c-525b9c1c8e24/_RS03919.jpg?format=1000w" alt="shoot lodge devon de hasse architectural and interior design " width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/e9cec801-7664-4e33-a031-4e92c5b791ae/IMG_0694.jpg?format=1000w" alt="shoot lodge devon de hasse architectural and interior design " width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 06: Apartment Portals Nous -->
+    <article class="project-showcase fade-in" id="project-06">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">06 / 11</span>
+            <h2 class="project-showcase-title">Apartment Portals Nous</h2>
+            <span class="project-showcase-loc">Majorca</span>
+          </div>
+          <p class="project-showcase-desc">A coastal residence defined by cool stone, subtle Mediterranean tones and seamless transitions between shaded internal living and sunlit sea views.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/166d831d-d997-4bb3-902b-b583589f2f42/IMG_1497-min.jpg?format=1500w" alt="Stylishly decorated seaside apartment in Portals Nous, Majorca by De Hasse architectural interior design14.jpeg" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/4d2b0765-35d9-4f92-acb2-fdbea7e72276/IMG_1569.jpg?format=1000w" alt="Stylishly decorated seaside apartment in Portals Nous, Majorca by De Hasse architectural interior design14.jpeg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/2d87413c-f11b-4f12-9f21-dc44eb7ebd90/Stylishly+decorated+seaside+apartment+in+Portals+Nous%2C+Majorca+by+De+Hasse+architectural+interior+design8.jpg?format=1000w" alt="Stylishly decorated seaside apartment in Portals Nous, Majorca by De Hasse architectural interior design14.jpeg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/682fceff-d83f-4fb3-8cd2-35630ee1044a/Stylishly+decorated+seaside+apartment+in+Portals+Nous%2C+Majorca+by+De+Hasse+architectural+interior+design6.jpg?format=1000w" alt="Stylishly decorated seaside apartment in Portals Nous, Majorca by De Hasse architectural interior design14.jpeg" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 07: Edwardian House -->
+    <article class="project-showcase fade-in" id="project-07">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">07 / 11</span>
+            <h2 class="project-showcase-title">Edwardian House</h2>
+            <span class="project-showcase-loc">Tunbridge Wells</span>
+          </div>
+          <p class="project-showcase-desc">A generous Edwardian villa renovation. The design highlights original spatial volume, high ceilings, bespoke architectural cabinetry, and a sculptural central stairwell.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/f7a0d89c-541f-45b8-84a0-1ab81bd617a0/IMG_4502-min.jpg?format=1500w" alt="dining-room-edwardian-house-tunbridge-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/e89a6232-31a0-455d-b699-d5ef1cffbb53/staircase-edwardian-house-tunbridge-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="staircase-edwardian-house-tunbridge-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/8cc15090-7a6f-4039-b2e6-817e97b3972c/details-2-edwardian-house-tunbridge-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="shower-head-edwardian-house-tunbridge-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/6fe5f4c7-f990-47ee-bce2-c98cff6d129e/sofa-1-edwardian-house-tunbridge-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="sofa-1-edwardian-house-tunbridge-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 08: Victorian Ground Floor Apartment -->
+    <article class="project-showcase fade-in" id="project-08">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">08 / 11</span>
+            <h2 class="project-showcase-title">Victorian Ground Floor Apartment</h2>
+            <span class="project-showcase-loc">Tunbridge Wells</span>
+          </div>
+          <p class="project-showcase-desc">A ground-floor period apartment renovation pairing exposed rustic brickwork, bespoke open-plan kitchen cabinetry, and calm private quarters.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/b89d76ac-d954-45a5-8401-6fdbb901d1d2/Victorian+ground+floor+apartment+renovation+in+Tunbridge+Wells+by+De+Hasse+architectural+interior+design2.jpg?format=1500w" alt="A bright kitchen and dining area with white walls, wooden furniture, a large window, a clock on the wall, and decorative signs. The dining table has a yellow wooden crate with white flowers. The kitchen island has jars, a sink, and black bar stools." width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/09d14e10-2886-4e83-bc06-44f2c8d45c64/Victorian+ground+floor+apartment+renovation+in+Tunbridge+Wells+by+De+Hasse+architectural+interior+design1.jpg?format=1000w" alt="A cozy living room with a white sofa, armchairs, a wooden coffee table with a potted fern, table lamps, and a window with curtains, decorated in a rustic style." width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/6b479379-e708-4069-868d-2d956e596a8b/Victorian+ground+floor+apartment+renovation+in+Tunbridge+Wells+by+De+Hasse+architectural+interior+design4.jpg?format=1000w" alt="A vintage-style bathroom with an exposed brick wall, a white bathtub with a towel, a window with white curtains, a showerhead, and decorative plants." width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/6fb51ed1-5ec9-4c62-9990-f699503b9ea0/Victorian+ground+floor+apartment+renovation+in+Tunbridge+Wells+by+De+Hasse+architectural+interior+design3.jpg?format=1000w" alt="A hallway interior with a vintage Coca-Cola wall sign, a bench with a pillow, a wooden desk with computers and plants, and a white door at the end with arched ceiling and hanging lights." width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 09: De Hasse Store -->
+    <article class="project-showcase fade-in" id="project-09">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">09 / 11</span>
+            <h2 class="project-showcase-title">De Hasse Store</h2>
+            <span class="project-showcase-loc">Tunbridge Wells</span>
+          </div>
+          <p class="project-showcase-desc">The design studio and curated architectural object space, demonstrating the practice's signature material palette, proportion, and lighting philosophy.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/3a0ccf3f-b9e6-4eb3-af13-ab2db8d70ae9/office-exterior-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1500w" alt="office-exterior-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/1bc3c72f-7cef-46d7-9c48-5b37f6a947a0/office-interior-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="office-interior-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/a23ce2e1-69a7-478f-82de-6de0b24e0483/details-4-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg?format=1000w" alt="details-4-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/07210e48-068a-4852-8249-fc461b63ed81/IMG_5223.jpg?format=1000w" alt="collection-de-hasse-store-by-De-Hasse-Architectural-and-Interior-Design.jpg" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 10: Rental Reconfiguration -->
+    <article class="project-showcase fade-in" id="project-10">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">10 / 11</span>
+            <h2 class="project-showcase-title">Rental Reconfiguration</h2>
+            <span class="project-showcase-loc">East Sussex</span>
+          </div>
+          <p class="project-showcase-desc">A complete architectural reconfiguration that unlocked natural daylight, flow, and enduring materiality across a prime country residential rental property.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/838c2d0d-63d6-4fb0-8d51-aac20bae369b/de-hasse-rental-reconfiguration-4.jpg?format=1500w" alt="de-hasse-rental-reconfiguration-4.png" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/fcd04e43-bc85-47f0-aed4-ed3f818cf1a1/IMG_9505-min.jpg?format=1000w" alt="door-rental-reconfiguration-east-sussex-mayfield-by-De-Hasse-Archi.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/b8ba9b4b-3edc-4264-9c88-f70959e864a3/lightings-rental-reconfiguration-east-sussex-mayfield-by-De-Hasse-.jpg?format=1000w" alt="lightings-rental-reconfiguration-east-sussex-mayfield-by-De-Hasse-.jpg" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/eb2423ea-9cfb-4279-bc78-a278e42d5f43/fireplace-1-rental-reconfiguration-east-sussex-mayfield-by-De-Hass.jpg?format=1000w" alt="fireplace-1-rental-reconfiguration-east-sussex-mayfield-by-De-Hass.jpg" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Project 11: Town House -->
+    <article class="project-showcase fade-in" id="project-11">
+      <div class="container">
+        <div class="project-showcase-header">
+          <div>
+            <span class="project-showcase-num">11 / 11</span>
+            <h2 class="project-showcase-title">Town House</h2>
+            <span class="project-showcase-loc">Old Richmond</span>
+          </div>
+          <p class="project-showcase-desc">A refined multi-storey historic town house renovated with custom architectural details, calm interior tones, and seamless functional living spaces.</p>
+        </div>
+        <div class="project-showcase-grid">
+        <div class="project-media-item primary">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/e5ec9542-01a7-49aa-9fa2-2ecdade4adc2/de-hasse-townhouse-2.jpg?format=1500w" alt="de-hasse-townhouse-2.png" width="1200" height="900" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/2afe1dfe-0482-4022-b4ab-7f0c20d210f8/de-hasse-townhouse-1.jpg?format=1000w" alt="de-hasse-townhouse-1.png" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/a1517c95-778d-4d18-b2bd-c8512e2e704a/de-hasse-townhouse-4.jpg?format=1000w" alt="de-hasse-townhouse-4.png" width="600" height="800" loading="lazy">
+        </div>
+        <div class="project-media-item">
+          <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/deddc2d8-6840-49a8-8290-ee2c8b383538/_RS00786.jpg?format=1000w" alt="de-hasse-townhouse-3.png" width="600" height="800" loading="lazy">
+        </div>
+        </div>
+      </div>
+    </article>
+    </section>
+
+    <!-- ====================================================================
+         FULL-WIDTH CTA BAND
+         ==================================================================== -->
+    <section class="cta-band fade-in" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-band-inner">
+          <p class="cta-band-statement">Every project begins with a clear understanding of how the space needs to function, feel and support daily life.</p>
+          <a href="contact.html" class="btn-cta">Contact</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================================
+       FOOTER (Identical markup on every page)
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo" aria-label="De Hasse Architectural &amp; Interior Design">
+            <img src="https://images.squarespace-cdn.com/content/v1/6628d03154ed134a49a03c22/7580c857-4c5d-4dc1-995c-e0786e145ae1/de-hasse-primary-logo-siam-rgb-900px-w-72ppi.png?format=1500w" alt="De Hasse Architectural &amp; Interior Design" width="900" height="238" loading="lazy">
+          </a>
+          <p class="footer-desc">Architectural &amp; Interior Design studio based in Kent, specialising in calm, considered residential homes.</p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Navigation</p>
+          <ul class="footer-links-list">
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="journal.html">Journal</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Contact</p>
+          <ul class="footer-links-list">
+            <li><a href="mailto:giselle@dehasse.co.uk">giselle@dehasse.co.uk</a></li>
+            <li><a href="tel:07774865391">07774 865391</a></li>
+            <li><a href="https://www.instagram.com/dehasseinteriordesign/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Legal</p>
+          <ul class="footer-links-list">
+            <li><a href="https://www.dehasseinteriordesign.co.uk/faqs" target="_blank" rel="noopener noreferrer">FAQs</a></li>
+            <li><a href="https://www.dehasseinteriordesign.co.uk/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy;2025 De Hasse Architectural &amp; Interior Design.</p>
+        <p>Kent, United Kingdom</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
